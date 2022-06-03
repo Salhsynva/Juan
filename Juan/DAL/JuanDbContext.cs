@@ -17,5 +17,6 @@ namespace Juan.DAL
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Policy> Policies { get; set; }
         public DbSet<Product> Products { get; set; }
+
     }
 }

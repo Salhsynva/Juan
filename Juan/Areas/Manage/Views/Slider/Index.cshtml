@@ -1,0 +1,39 @@
+﻿@model List<Slider>
+@{
+    ViewData["Title"] = "Slider";
+    int count = 0;
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Title1</th>
+                        <th scope="col">Title2</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var sl in Model)
+                    {
+                        count++;
+                    <tr>
+                        <th scope="row">@count</th>
+                        <td> <img width="300px" height="200px" src="~/assets/img/slider/@sl.Image" alt="Alternate Text" /> </td>
+                        <td>@sl.Title1</td>
+                        <td>@sl.Title2</td>
+                        <td>@sl.Desc</td>
+                    </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+

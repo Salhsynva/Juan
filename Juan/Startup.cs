@@ -38,6 +38,11 @@ namespace Juan
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
+                    "areas",
+                    "{area:exists}/{controller=dashboard}/{action=index}/{id?}"
+                    );
+
+                endpoints.MapControllerRoute(
                     "default",
                     "{controller=home}/{action=index}/{id?}"
                     ) ;

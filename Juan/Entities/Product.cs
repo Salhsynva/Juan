@@ -19,5 +19,6 @@ namespace Juan.Entities
         public bool Availability { get; set; }
         [MaxLength(25)]
         public string Image { get; set; }
+        public List<ProductImage> ProductImages { get; set; }
     }
 }

@@ -1,0 +1,36 @@
+﻿@model List<Policy>
+@{
+    ViewData["Title"] = "Policy";
+    int count = 0;
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Icon</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var policy in Model)
+                    {
+                        count++;
+                        <tr>
+                            <th scope="row">@count</th>
+                            <td><img src="../assets/img/icon/@policy.Icon" alt="policy icon"></td>
+                            <td>@policy.Title</td>
+                            <td>@policy.Desc</td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
